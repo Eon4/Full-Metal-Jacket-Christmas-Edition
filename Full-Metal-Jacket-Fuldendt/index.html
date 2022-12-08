@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Metal Jacket</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/JS.js" defer></script> <!-- HUSK AT defer BETYDER AT HTML SKAL LÆSES IGENNEM FØR JAVA SCRIPT KØRE -->
+</head>
+<body>
+    <header class="header-main">
+        <img src="assets/images/header.jpg" alt="">
+        <hgroup>
+            Full Metal Jacket - Christmas Edition!
+        </hgroup>
+        <nav class="nav-main">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#gallery">Gallery</a>
+                  </li>
+                  <li>
+                    <a href="#">About</a>
+                  </li>
+                  <li>
+                    <a href="#signup">Sign Up</a>
+                  </li>
+                </ul>
+            </ul>
+        </nav>
+    </header>
+    <!-- SECTION GALLERY -->
+    <h1 id="gallery">
+        Gallery Section
+    </h1>
+    <section class="section-gallery">
+            <!-- THE "ORIGINAL IMAGE" THAT IS LOADED VIA THE SRC -->
+            <img src="assets//images/sorry02.png" id="imgLarge">
+            
+            <!-- THE CONTAINER ELEMENT (DIV IN THIS CASE) HAS CLASSNAME "imgCon" (Image Container)? -->
+            <div class="gallery_content">
+            <!-- EVERY ELEMENT: "IMG" ("this") HAS A DIFFERENT SOURCE, WHICH WILL REPLACE THE "ORIGINAL ONE" ON "ID:'image-large'" onclick ;0) -->
+                <img src="assets/images/cat.jpg">
+                <img src="assets/images/coco.jpg">
+                <img src="assets/images/julelys.jpg">
+                <img src="assets/images/hund.jpg">
+                <img src="assets/images/snowtown.jpg">
+                <img src="assets/images//family.jpg">
+            </div>
+    </section>
+    <!-- HER STARTER FORMEN (BEMÆRK: "novalidate" SKAL FJERNES ;0) -->
+    <form action="Thanks.html" novalidate onsubmit="return validate(this);" class="myform">
+        <fieldset id="signup">
+          <legend>Signup Form</legend>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" required />
+
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" required />
+
+            <label for="adresse">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Ex: Adress@mail.com" required />
+
+            <label for="password">Password:</label><area shape="" coords="" href="" alt="">
+            <input type="text" id="password" name="password" placeholder="#####" required />
+
+            <label for="confirmpassword">Repeat Password:</label>
+            <input type="text" id="confirmPassword" name="confirmPassword" placeholder="#####" required />
+            <input type="submit" value="Submit" />
+      </fieldset>
+      </form>
+</body>
+</html>

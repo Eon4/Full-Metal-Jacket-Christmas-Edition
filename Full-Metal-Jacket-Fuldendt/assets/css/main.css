@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100;200;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap');
+/* VARIABLES IN HTML: */
+:root {
+    --light: rgb(255, 255, 255);
+    --medium: #999;
+    --dark: #333;
+    --charcoal: #212121;
+    --rudolfnose: rgb(226, 3, 3);
+    --gift: rgb(143, 0, 0);
+    --orange: rgb(255, 106, 0);
+    --christmastree: #115211;
+    --gold: #c68e00;
+    --cookie: #583500;
+
+}
+*{
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family:'Smooch Sans', sans-serif; /*"SMOOCH SANS" IS A GOOGLE FONT*/
+    font-weight: 400;
+    background-color: var(--gift);
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* TEXT FORMATTING */
+h1 {
+    color: var(--orange);
+    display: block;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    font-family: Mountains of Christmas;
+}
+
+/* GLOBAL BLOCKS */
+.container-main{
+    max-width: 1200px;
+    margin: auto;
+    border: 1px solid var(--medium);
+}
+.header-main img{
+    display: block;
+    width: 100%;
+}
+.header-main hgroup{
+    position: absolute;
+    top: 1rem;
+    color: var(--rudolfnose);
+    font-size: 5.5vw;
+    font-family:Mountains of Christmas;
+    text-shadow: 3px 3px 3px #ffffff;
+    font-weight: bolder;
+    display: inline-block;
+    margin-left: 10%;
+    margin-top: 10%;
+    text-align: center;
+
+}
+.header-main hgroup:hover {
+    color: var(--gold);
+    cursor: pointer;
+}
+
+.nav-main {
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.nav-main ul {
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--christmastree);
+}
+
+.nav-main a{
+    color: var(--light);
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family:Mountains of Christmas;
+    text-decoration: none;
+}
+
+.nav-main a:hover {
+    color:var(--gold);
+    /* transition: ; */
+}
+
+/* SECTION GALLERY */
+.section-gallery div {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.section-gallery img {
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    border-color: var(--christmastree);
+    border-style: double;
+    border-width: 10px;
+    border-radius: 2%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#imgLarge {
+    width: 100%;
+    height: 100%;
+}
+
+/*--------------- FORM ---------------------*/
+  /* "FIELDSETTET" ER "FLEXCONTAINEREN I DETTE TILFÆLDE" */
+  .myform {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    align-items: center;
+  }
+
+
+  .myform fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .myform legend{
+    font-size: 1.5rem;
+    font-family: Mountains of Christmas;
+    color: var(--gold);
+    font-weight: bold;
+  }
+  .myform label{
+    font-size: 0.8rem;
+    color: var(--gold);
+    font-family: sans-serif;
+
+  }
+  .myform input{
+    padding: 0.3rem;
+    
+  }
+  /* BUTTON STYLING */
+  .myform input[type=submit]{
+    margin-top: 0.5rem;
+    padding: 0.6rem;
+    background-color: var(--christmastree);
+    color: var(--light);
+    border: none;
+    cursor: pointer;
+    filter: saturate(0.6);
+    transition: 400ms;
+  }
+  .myform input[type=submit]:hover{
+    filter: saturate(1.2);
+    color: var(--rudolfnose);
+  }
+
+
+/* MEDIA QUERIES: ONE "OVER" ("min-width"), and ONE "UNDER" ("max-width")! ;0) */
+
+/* OVER 1600px */
+@media (min-width: 1600px) {
+    body{
+        background-color: var(--gift);
+    }
+}
+
+/* UNDER 600px */
+@media (max-width: 600px) {
+    body{
+        background-color: var(--rudolfnose);
+    }
+}
+@media (max-width: 600px) {
+    .section-gallery div {
+        display: grid;
+        gap: 0.5em;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 700px) {
+    .section-gallery div {
+        display: grid;
+        gap: 0.5em;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1000px) {
+    .section-gallery div {
+        display: grid;
+        gap: 0.5em;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-main ul {
+        text-align: center;
+        top: 0;
+        display: inline-block;
+        /* justify-content: flex-end; */
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+}
+
+@media (min-width: 1600px) {
+    #imgLarge {
+        width: 60%;
+        height: 60%;
+    }
+}
+
+@media (min-width: 800px) {
+    .myform fieldset{
+        width: 70%;
+        height: 70%;
+      }
+}
+
+@media (max-width: 800px) {
+    .myform fieldset{
+        width: 80%;
+        height: 80%;
+      }
+}
